@@ -1,0 +1,100 @@
+# Gemini Streamlit Chatbot
+
+A simple question and answer chatbot application built with Streamlit and the Google Gemini Flash API. This application allows users to interact with the Gemini model through a web interface and keeps track of the conversation history.
+
+## Features
+
+* Simple web-based interface using Streamlit.
+* Interacts with the Google Gemini Flash (preview) model.
+* Maintains and displays the chat history within the current session.
+* Easy to set up and run.
+
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+* **Python:** Version 3.7 or higher.
+* **pip:** Python package installer.
+* **Google AI API Key:** Obtain one from the [Google AI Studio](https://aistudio.google.com/app/apikey).
+
+## Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone <https://github.com/Bayzid03/QNA-ChatBot-with-Chat-History>
+    cd <>
+    ```
+2.  **Create a virtual environment (recommended):**
+    ```bash
+    python -m venv venv
+    ```
+
+3.  **Activate the virtual environment:**
+    * On Windows:
+        ```bash
+        .\venv\Scripts\activate
+        ```
+    * On macOS and Linux:
+        ```bash
+        source venv/bin/activate
+        ```
+
+4.  **Install the required packages:**
+    Create a `requirements.txt` file in the same directory as your Python script (`app.py` or similar) with the following content:
+    ```
+    streamlit
+    google-generativeai
+    python-dotenv # Recommended for managing API key securely
+    ```
+    Then, install the packages:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## Configuration
+
+1.  **Set your Google AI API Key:**
+    The application reads the API key from the environment variable `GOOGLE_API_KEY`.
+    * **Using `.env` file (Recommended for local development):**
+        Create a file named `.env` in the root directory of your project with the following content:
+        ```dotenv
+        GOOGLE_API_KEY=YOUR_API_KEY
+        ```
+        Replace `YOUR_API_KEY` with the actual API key you obtained. Ensure you have `python-dotenv` installed (`pip install python-dotenv`) and add `.env` to your `.gitignore` file.
+
+    * **Setting environment variable directly (Temporary or for deployment):**
+        * On Windows (Command Prompt):
+            ```bash
+            set GOOGLE_API_KEY=YOUR_API_KEY
+            ```
+        * On Windows (PowerShell):
+            ```powershell
+            $env:GOOGLE_API_KEY="YOUR_API_KEY"
+            ```
+        * On macOS and Linux:
+            ```bash
+            export GOOGLE_API_KEY=YOUR_API_KEY
+            ```
+        *(Replace `YOUR_API_KEY` with your actual API key. Note that setting it this way is temporary and only lasts for the current terminal session unless added to your shell profile.)*
+
+## How to Run
+
+1.  Make sure your virtual environment is activated.
+2.  Ensure the `GOOGLE_API_KEY` environment variable is set.
+3.  Run the Streamlit application from the terminal in the project directory:
+    ```bash
+    streamlit run <QnA_ChatBot>.py
+    ```
+    This will open the application in your web browser.
+
+## Technologies Used
+
+* Python
+* Streamlit
+* Google Generative AI API (Gemini Flash)
+
+## Contributing
+
+Contributions are welcome! If you have suggestions for improvements or new features, feel free to open an issue or submit a pull request.
+
+---

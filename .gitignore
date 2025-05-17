@@ -1,0 +1,35 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.pyc
+*.pyd
+*.so
+
+# Distribution / packaging
+.Python
+build/
+dist/
+wheels/
+*.egg-info/
+.eggs/
+
+# Environments
+.env
+.venv
+venv/
+env/
+ENv/
+buildenv/
+.buildenv/
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Streamlit specific
+.streamlit/secrets.toml # If you use Streamlit secrets (alternative to .env)

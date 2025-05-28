@@ -7,12 +7,13 @@ genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 model = genai.GenerativeModel("gemini-2.5-flash-preview-04-17")
 chat = model.start_chat(history=[])
 
+# Function for handling chatbot responses while ensuring error management
 def get_response(question):
     try:
-        response = chat.send_message(question, stream=True)
+        response = chat.send_message(question, stream=True) ## It sends a question to the chatbot (chat.send_message), enabling streaming responses.
         return response
     except Exception as e:
-        st.error(f"Error: {e}")
+        st.error(f"Error: {e}") ## If an error occurs, it catches the exception and displays an error message using st.error()
         return []
 
 st.set_page_config(page_title="Q&A ChatBot")
